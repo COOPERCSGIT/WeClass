@@ -1,0 +1,13 @@
+<view class="container" >
+
+  <view  bindtap="bindViewTap" class="userinfo">
+  <view hidden="{{!hiddenFlag}}"><icon type="waiting" size="100"> </icon> </view>
+  <view hidden="{{hiddenFlag}}"><icon type="success" size="100"> </icon> </view>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto"> {{motto}} </text>
+  </view>
+
+
+</view>

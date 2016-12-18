@@ -1,0 +1,37 @@
+.container {
+  padding: 4px 12px;
+}
+.coursee{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+
+}
+.hint {
+
+    display: block;
+    margin: 8px 0;
+    color: #999;
+    font-size: 15px
+}
+
+.course {
+
+    height : 100px;
+    width : 100%;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    margin: 8px;
+    border-color: lightseagreen;
+}
+
+.courseName{
+    position: relative;
+    top:41%;
+    left: 36%;
+    font-size: 20;
+    font-style: italic;
+    
+}
+
+
+

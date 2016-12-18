@@ -1,0 +1,25 @@
+<view class="container">
+<view hidden="{{hidden}}">
+  <text class="hint">欢迎使用</text>
+  <view class="form-wrap">
+    <view class="flex-wrap input-wrap">
+      <input placeholder="学号" id="username" class="account-info-input"/>
+    </view>
+    <view class="flex-wrap input-wrap">
+      <input password placeholder="密码" id="password" class="account-info-input"/>
+    </view>
+  </view>
+  <button class="submit" type="primary" bindtap="sign">Sign In/Up</button>
+  </view>
+  <view hidden="{{!hidden}}">
+  <text class="hint">登录成功</text>
+    <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <icon type="success_no_circle" size="60"></icon> 
+    </view>
+    <view class="usermotto">
+    <text class="user-motto"> {{motto}} </text>
+  </view>
+  </view>
+</view>

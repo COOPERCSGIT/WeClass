@@ -1,0 +1,24 @@
+.count_down{
+    position: relative;
+    left: 550rpx;
+    font-size: 30px;
+    color: #aaa;
+    margin-top: 30rpx
+}
+.question{
+    position: relative;
+    margin-top:100px; 
+}
+
+.checkbox{
+  position: relative;
+    
+
+}
+.upload{
+    position: relative;
+    left: 550rpx;
+    width: 150rpx;
+    margin-top: 400px;
+}
+

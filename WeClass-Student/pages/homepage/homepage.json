@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#7A8B8B",
+    "tabBar": {
+      "list": [{
+        "pagePath": "pagePath",
+        "text": "text",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+      }]
+    }
+}

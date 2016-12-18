@@ -1,0 +1,31 @@
+
+<view class="container">
+    <view class = "coursee"><text class="hint">今日课程</text></view>
+    <view class="course" bindtap = "onItemClick" id = 'S'>
+        <text class="courseName">信号与系统</text>
+        <view wx:if="{{hidden[0]}}" class = "icon">
+        <icon size="40" type="success_no_circle"></icon>
+        </view>
+    </view>
+
+    <view class="course" bindtap = "onItemClick" id = "P">
+        <text class="courseName">概率论</text>
+        <view wx:if="{{hidden[1]}}" class = "icon">
+        <icon size="40" type="success_no_circle"></icon>
+        </view>
+    </view>
+
+    <view class="course" bindtap = "onItemClick" id = "D">
+        <text class="courseName">数字设计</text>
+        <view wx:if="{{hidden[2]}}" class = "icon">
+        <icon size="40" type="success_no_circle"></icon>
+        </view>
+    </view>
+
+    <view class="course" bindtap = "onItemClick" id = "D">
+        <text class="courseName">大学物理</text>
+        <view wx:if="{{hidden[2]}}" class = "icon">
+        <icon size="40" type="success_no_circle"></icon>
+        </view>
+    </view>
+</view>
