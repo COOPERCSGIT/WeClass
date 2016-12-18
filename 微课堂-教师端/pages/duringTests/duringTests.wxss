@@ -1,0 +1,27 @@
+.container {
+    padding: 4px, 12px;
+}
+
+.header {
+    margin-top: -90px;
+    margin-left: -10px;
+}
+
+.count_down{
+    font-size: 45px;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: right;
+}
+
+.para {
+    margin-left: 5px;
+    margin-top: 15px;
+    border-bottom: 2px solid antiquewhite;
+    width: 300px;
+    padding-bottom: 8px;
+}
+
+.QandA {
+    margin-top: 20px;
+}

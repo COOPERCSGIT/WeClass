@@ -1,0 +1,28 @@
+<view class="container">
+
+<view class="header">
+<icon type="waiting_circle" size="60" id="icon" bindtap = "clickTimer"></icon>
+<text class="count_down">{{showSecond}}</text>
+</view>
+
+<view class="QandA">
+<view class="para"><text class="question">这是一个问题</text></view>
+<view class="para"><text class="answer">这是第一个答案</text></view>
+<view class="para"><text class="answer">这是第二个答案</text></view>
+<view class="para"><text class="answer">这是第三个答案</text></view>
+<view class="para"><text class="answer">这是第四个答案</text></view>
+<view class="para"><text class="analysis">这是答案解析</text></view>
+</view>
+
+<view class="QandA">
+<view class="para"><text class="question">这又是一个问题</text></view>
+<view class="para"><text class="answer">这是第一个答案</text></view>
+<view class="para"><text class="answer">这是第二个答案</text></view>
+<view class="para"><text class="answer">这是第三个答案</text></view>
+<view class="para"><text class="answer">这是第四个答案</text></view>
+<view class="para"><text class="analysis">这是答案解析</text></view>
+</view>
+
+
+
+</view>

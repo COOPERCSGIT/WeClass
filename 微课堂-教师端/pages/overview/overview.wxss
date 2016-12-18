@@ -1,0 +1,19 @@
+.text{
+    font-size: 10;
+}
+
+.ratio{
+    margin-top:20px;
+    padding-bottom: 10px;
+}
+.para{
+    margin-top: 15px;
+    border-bottom: 2px solid antiquewhite;
+    padding-bottom: 3px;
+    width: 80px; 
+    text-align: center;
+}
+
+.canvas{
+    margin-left: 50px;
+}
