@@ -1,0 +1,23 @@
+<view>
+
+  <view class="count_down">
+    <text> {{second}} </text>
+  </view>
+
+  <view class="question">
+    <text class="question_main">{{question}}  </text>
+  </view>
+    <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+    </view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+     <checkbox value="{{index}}" checked="{{false}}" />{{item}}
+</label>
+  </checkbox-group>
+
+  <view class = "upload">
+  <button bindtap = "next_question">提交</button>
+  </view>
+
+</view>

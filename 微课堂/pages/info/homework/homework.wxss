@@ -1,0 +1,29 @@
+.course {
+    height : 100px;
+    width : 100%;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    margin: 8px;
+    border-color: lightseagreen;
+}
+
+.course2{
+    height : 100px;
+    width : 100%;
+}
+
+.atext{
+    position: relative;
+    margin-top: 45%;
+}
+
+.text{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px; 
+    font-size: 15px;
+    color: seagreen;
+}
+.container {
+  padding: 40px 12px;
+}

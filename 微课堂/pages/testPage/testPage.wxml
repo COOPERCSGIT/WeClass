@@ -1,0 +1,7 @@
+<view class = "container">
+<view wx:for="{{test}}" class = "course">
+    <view id = "{{index}}" class = "course2" bindtap = "clickTest" >
+        <text class = "text">{{item}}</text>
+    </view>
+</view>
+</view>

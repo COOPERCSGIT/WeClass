@@ -1,0 +1,11 @@
+<view class="container" >
+
+  <view  bindtap="bindViewTap" class="userinfo">
+  <view wx:if="{{false}}"><icon type="waiting" size="100"> </icon> </view>
+  <view wx:if="{{true}}"><icon type="success" size="100"> </icon> </view>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto"> {{motto}} </text>
+  </view>
+</view>

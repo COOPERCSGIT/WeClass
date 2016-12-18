@@ -1,0 +1,40 @@
+{
+    "pages":[
+        "pages/info/info",
+        "pages/homepage/homepage",
+        "pages/login/login",
+        "pages/testPage/testPage",
+        "pages/quiz/quiz",
+        "pages/initquiz/initquiz",
+        "pages/info/homework/homework",
+        "pages/info/download/download"
+            ],
+    "window":{
+        "navigationBarTitleText": "微课堂",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "backgroundTextStyle": "light"
+    },
+    "tabBar": {
+        "color": "#ddd",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+      "list": [{
+        "pagePath": "pages/homepage/homepage",
+        "text": "课堂测验",
+        "iconPath": "/images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png"
+      },{
+        "pagePath": "pages/info/info",
+        "text": "课程信息",
+        "iconPath": "/images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png"
+      },{
+        "pagePath": "pages/login/login",
+        "text": "我的账号",
+        "iconPath": "/images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png"
+      }]
+    }
+}
