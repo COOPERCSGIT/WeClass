@@ -10,6 +10,8 @@ WeClass（微课堂）是一款集课堂在线测试与统计分析，信息发�
 
 ##预览
 ![PNG](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/weClass.png)
+![gif](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/stu.gif)
+![gif](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/tea.gif)
 
 ##学生端
 1. 在主页面可以查看今天的课程，并在可以根据相应的时间段来显示正在上的课程
