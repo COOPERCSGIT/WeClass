@@ -1,7 +1,5 @@
 {
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#7A8B8B",
+     "navigationBarTitleText": "课堂小测",
     "tabBar": {
       "list": [{
         "pagePath": "pagePath",

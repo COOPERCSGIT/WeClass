@@ -12,6 +12,7 @@ Page({
         app.globalData.currentURL = util.BASE_URL
     },
     onItemClick: function (event) {
+        downLoad();
         var ex = /course/;
         if(ex.test(app.globalData.currentURL)){
             app.globalData.currentURL = util.BASE_URL;
@@ -37,9 +38,6 @@ Page({
             default :
             return;
         }
-        wx.navigateTo({
-            url: '../testPage/testPage'
-        })
     }
 });
 
@@ -57,3 +55,20 @@ function addStatus(that){
 var date = new Date()
 var util = require('../../utils/util.js')
 var courseInfo = require('../../utils/courseinfo.js')
+
+
+function downLoad(){
+wx.downloadFile({
+  url: util.BASE_URL+'files/SS_2016_C9_L23.ppt',
+  success: function (res) {
+    console.log(res.tempFilePath)
+    var filePath = res.tempFilePath 
+    wx.openDocument({
+      filePath: filePath,
+      success: function (res) {
+        console.log('打开文档成功')
+      }
+    })
+  }
+})
+}

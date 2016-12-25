@@ -1,4 +1,3 @@
 { 
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#7A8B8B"
+   "navigationBarTitleText": "登录注册"
 }

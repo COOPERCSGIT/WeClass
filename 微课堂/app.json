@@ -10,10 +10,10 @@
         "pages/info/download/download"
             ],
     "window":{
-        "navigationBarTitleText": "微课堂",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTextStyle": "black",
-        "backgroundTextStyle": "light"
+       "backgroundTextStyle": "light",
+       "navigationBarBackgroundColor": "#3197ed",
+       "navigationBarTitleText": "",
+       "navigationBarTextStyle": "white"
     },
     "tabBar": {
         "color": "#ddd",

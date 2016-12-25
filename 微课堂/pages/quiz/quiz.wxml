@@ -1,10 +1,28 @@
-<view>
+<view class="container timer {{isRuning ? 'timer--runing': ''}}">
+<view class="timerBox">
+	<view class="timer_main">
+		 <view class="timer_time-wrap">
+		 		<view class="timer_progress_mask"></view>
+		 		<view class="timer_progress timer_left">
+		 			<view class="timer_circle timer_circle--left" style="transform: rotate({{leftDeg}}deg);"></view>
+		 		</view>
+		 		<view class="timer_progress timer_right">
+		 			<view class="timer_circle timer_circle--right" style="transform: rotate({{rightDeg}}deg);"></view>
+		 		</view>
+			 	<text wx:if="{{!completed}}" class="timer_time">{{remainTimeText}}</text>
+			 	<text 
+			 		wx:if="{{isRuning}}" 
+			 		animation="{{nameAnimation}}" 
+			 		class="timer_taskName">{{taskName}}{{completed ? '已完成！' : '中'}}</text>
+		 		<image 
+		 			wx:if="{{completed}}" 
+		 			class="timer_done" 
+		 			src="../../../image/complete.png"></image>
+		 </view>
+</view>
 
-  <view class="count_down">
-    <text> {{second}} </text>
-  </view>
-
-  <view class="question">
+	</view>
+	  <view class="question">
     <text class="question_main">{{question}}  </text>
   </view>
     <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
@@ -20,4 +38,4 @@
   <button bindtap = "next_question">提交</button>
   </view>
 
-</view>
+

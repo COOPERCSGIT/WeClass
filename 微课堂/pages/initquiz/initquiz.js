@@ -6,7 +6,7 @@ var app = getApp()
 Page({
   data: {
     motto: '测试尚未开始',
-    hiddenFlag : false
+    hiddenFlag : true
 
   },
   //事件处理函数
@@ -19,13 +19,8 @@ Page({
   onLoad: function () {
     that = this;
     requestFlag(that);
-  },
-    onHide:function(){
-      
-  },
-  highlightIcon:function(){
-
   }
+
 })
 
 var that;
@@ -34,16 +29,16 @@ wx.request({
   url: 'https://104.194.73.140/postdata',
   method: 'GET',
   success: function(res){
-    console.log(res.data)
-    if(res.data!=null){
-      if(res.data == '1'){
-        console.log('Flag!::'+res.data)
-      that.setData({
-        hiddenFlag : true,
-        motto : '测试开始'
-      })
-    }}
-    return;
+    // // console.log(res.data)
+    // // if(res.data!=null){
+    // //   if(res.data == '1'){
+    // //     console.log('Flag!::'+res.data)
+    // //   that.setData({
+    // //     hiddenFlag : true,
+    // //     motto : '测试开始'
+    // //   })
+    // }}
+    // return;
   },
   fail: function() {
     return;

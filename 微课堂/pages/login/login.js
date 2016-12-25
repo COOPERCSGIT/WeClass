@@ -1,5 +1,5 @@
 var app = getApp();
-
+ var Util = require('../../utils/util.js')
 Page({
   data: {
     user: null,
@@ -39,6 +39,9 @@ Page({
     });
   },
   sign: function () {
+
+
+    login();
     wx.showToast({
       title: '登录成功',
       icon: 'success',
@@ -62,3 +65,39 @@ Page({
     // });
   }
 });
+
+
+
+
+
+function login(){
+  wx.request({
+    url: 'https://104.194.73.140/student/accounts/login/',
+    header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+        data: Util.json2Form( { 
+          username : 'admin',
+          password : 'xc19970113'
+
+         }),
+    method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    // header: {}, // 设置请求的 header
+    success: function(res){
+      app.globalData.UserID = res.data.session_id;
+      console.log(app.globalData.UserID);
+
+     },
+    fail: function() {
+
+      console.log('');
+      // fail
+    },
+    complete: function() {
+      // complete
+    }
+  })
+
+
+
+}
