@@ -1,5 +1,6 @@
 {
-    "navigationBarTitleText": "QUIZ",
-        "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#7A8B8B"
+    "navigationBarTitleText": "测试中",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTextStyle": "white"
 }

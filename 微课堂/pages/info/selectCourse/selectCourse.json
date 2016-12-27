@@ -1,4 +1,5 @@
-{   "navigationBarTitleText": "测试列表",
+{
+    "navigationBarTitleText": "课程",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3197ed",
     "navigationBarTextStyle": "white"

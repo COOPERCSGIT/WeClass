@@ -1,4 +1,4 @@
-<view class="container timer {{isRuning ? 'timer--runing': ''}}">
+<view  class="container timer {{isRuning ? 'timer--runing': ''}}">
 <view class="timerBox">
 	<view class="timer_main">
 		 <view class="timer_time-wrap">
@@ -17,7 +17,7 @@
 		 		<image 
 		 			wx:if="{{completed}}" 
 		 			class="timer_done" 
-		 			src="../../../image/complete.png"></image>
+		 			src="../../../images/complete.png"></image>
 		 </view>
 </view>
 
@@ -34,8 +34,7 @@
 </label>
   </checkbox-group>
 
-  <view class = "upload">
-  <button bindtap = "next_question">提交</button>
-  </view>
+
+  <button  class = "button" bindtap = "next_question">提交</button>
 
 

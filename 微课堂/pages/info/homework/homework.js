@@ -1,74 +1,48 @@
 var app = getApp();
-
 Page({
-    data:{
-        test : [
+    data: {
+        homework: [
         ],
-        testNum : 0,
-        hiddeFlag :app.globalData.hiddenFlag
+        homeworkNum: 0,
+        time: [],
+        iconZ : '../../../images/测.png'
     },
-
-
-    onLoad:function(){
+    onLoad: function () {
         that = this;
         requestData(that)
-
     },
-
-    clickTest:function(event){
-       var ex = /test/;
-        if(ex.test(app.globalData.currentURL)){
-            app.globalData.currentURL = app.globalData.lastURL;
-        }
-        
-        switch(event.target.id)
-        {
-            case '0':
-            app.globalData.lastURL = app.globalData.currentURL
-            app.globalData.currentURL+='test/1/'
-            break
-            case "1":
-            app.globalData.lastURL = app.globalData.currentURL
-            app.globalData.currentURL+='test/2/'
-            break
-            case "2":
-            app.globalData.lastURL = app.globalData.currentURL
-            app.globalData.currentURL += 'test/3/'
-            break
-            default :
-            return;
-        }
-
-    }
-
-
 })
 
+
 var that;
-var pages;
 var testCount;
-var Test = [];
+var Homework = [];
+var Time = [];
 
-function requestData(that){
+function requestData(that) {
     wx.request({
-      url: app.globalData.currentURL,
-      method: 'GET',
-      success: function(res){
-          if(res!=null){
-              console.log(res.data)
-              if(res.data.homework!=null){
-                Test = res.data.homework
+        url: app.globalData.currentURL,
+        method: 'GET',
+        success: function (res) {
+            if (res != null) {
+                console.log('作业信息'+res.data)
+                Homework = [];
+                var i = 0;
+                for (var item in res.data){
+                    Homework.push(res.data[i].homework)
+                    Time.push(res.data[i].the_time)
+                    console.log(res.data[i].homework)
+                    i++;
+                }
+                console.log(Homework)
+                console.log(Time)
                 that.setData({
-                  test : Test,
-                  testNum :Test.length ,
-                  hiddenFlag : false
-              })
-                  return;
-              }
-
-          }
-          }
-
-      })
-    }
-
+                    time : Time,
+                    homework: Homework,
+                    homeworkNum: Homework.length,
+                })
+                return;
+            }
+        }
+    })
+}

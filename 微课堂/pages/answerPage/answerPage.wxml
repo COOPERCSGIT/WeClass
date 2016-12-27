@@ -1,0 +1,21 @@
+<view class="container">
+  <view wx:for="{{question}}" class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text" style="font-color:black;">问题{{index+1}}：</view>
+        <view class="weui-media-box__desc_question" style="font-color:black;">{{item}}</view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="margin-top:14px;margin-bottom:-8px">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+        <view class="weui-media-box__desc_answer" style="font-color:black;">A:{{answer[index][0]}}</view>
+        <view class="weui-media-box__desc_answer" style="font-color:black;">A:{{answer[index][1]}}</view>
+        <view class="weui-media-box__desc_answer" style="font-color:black;">A:{{answer[index][2]}}</view>
+        <view class="weui-media-box__desc_answer" style="font-color:black;">A:{{answer[index][3]}}</view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="margin-top:14px;margin-bottom:-8px">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+        <view class="weui-media-box__desc_analysis">解析：{{desc[index]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

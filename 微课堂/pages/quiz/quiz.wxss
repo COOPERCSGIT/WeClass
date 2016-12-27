@@ -199,7 +199,7 @@
 
 .question{
     position: relative;
-    margin-top:20px; 
+    margin-top:50px; 
     margin-left: 15px;
     margin-right: 10px;
     margin-bottom: 10px; 
@@ -270,4 +270,10 @@
   margin-top: -120px; 
   text-align: center;
 }
-
+.button{
+  background-color: #3197ed;
+  color: white;
+  position: relative;
+  border-radius: 30px;
+  margin : 60px; 
+}

@@ -17,6 +17,7 @@ const initDeg = {
  var Util = require('../../utils/util.js')
 Page({
   data:{
+    initFlag :false,
     question :  '',
     currentQuestion : 0,
     items : {},
@@ -34,13 +35,14 @@ Page({
 
   onLoad:function(){
     var that = this;
+    requestFlag(that);
     setTimeout(this.startTimer,2000);
     let workTime = Util.formatTime(this.data.second, 'HH')
     this.setData({
       workTime: workTime,
       remainTimeText: workTime + ':00'
     })
-
+   //postID()
     requestData(that)
   },
 
@@ -74,26 +76,34 @@ Page({
           console.log('用户点击确定')
           post(currentChoice);
           currentQuestionNo++;
-          
           setNextQuestion(that);
           }
       }
 })
 },
-quizOver:function(){
-    wx.showModal({
-      title: '提示',
-      content: '答题结束',
-      success: function(res) 
-      {
-          if (res.confirm) 
-          {
-              wx.navigateTo({
-                url: '../homepage/homepage'
-              })
 
-          }
-      }
+quizOver:function(){
+wx.showModal({
+  title: '提示',
+  content: '答题结束',
+  showCancel:false,
+  success: function(res) {
+    if (res.confirm) {
+      console.log('用户点击确定')
+      wx.redirectTo({
+        url: '../answerPage/answerPage',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    }
+  }
 })
 },
 
@@ -146,8 +156,6 @@ quizOver:function(){
     })
   },
 
-
-
   stopTimer: function() {
     // reset circle progress
     this.setData({
@@ -159,6 +167,15 @@ quizOver:function(){
     this.quizOver();
   },
 
+  stopTime: function() {
+    // reset circle progress
+    this.setData({
+      leftDeg: initDeg.left,
+      rightDeg: initDeg.right
+    })
+    // clear timer
+    this.timer && clearInterval(this.timer)
+  },
 
   updateTimer: function() {
     let log = this.data.log
@@ -241,16 +258,17 @@ function requestData(that) {
         header: {
             "Content-Type": "application/json"
         },
-        data:Util.json2Form({
+        data:{
           session_id : app.globalData.UserID
-        }),
+        },
         success: function (res) {
         if (res.statusCode == 404) 
-            {
+        {
             that.quizOver()
             return;
-            }
-            console.log(res.data)
+        }
+        console.log(app.globalData.currentURL+'problem/'+currentQuestionNo+'/');
+        console.log(res.data)
         bindData(res.data.problem);
         console.log(currentAnswer)
         that.setData({
@@ -258,6 +276,9 @@ function requestData(that) {
             items : currentAnswer,
         });
         console.log(that.data.second)
+        },
+        fail:function(){
+          console.log(app.globalData.currentURL)
         }
     });
 }
@@ -275,19 +296,25 @@ function bindData(itemData) {
 
 
 function post(currentChoice) {
+   postID();
     wx.request({
         url: app.globalData.currentURL+'problem/'+currentQuestionNo+'/' ,
-        header: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        method: "POST",
-        data: Util.json2Form( { 
-          choice : currentChoice+1,
-          session_id : app.global.UserID
-         }),
+        // header: {
+        //   "Content-Type": "application/x-www-form-urlencoded"  
+        // },
+        // data: Util.json2Form({
+        //    session_id : app.globalData.UserID,
+        //    choice : 2          
+        //  }),
+            data: {
+      session_id : app.globalData.UserID,
+      choice : 2 
+    },
+        method: "GET",
         success:function(res){
+           
             console.log('当前选择 '+currentChoice)
-            console.log('返回成功' +res.data)
+            console.log('返回成功' +res)
         },
         fail:function(){
             console.log('没有POST成功')
@@ -299,5 +326,67 @@ function post(currentChoice) {
             }
         }
     });
+}
 
+
+
+function postID(){
+  wx.request({
+    url: app.globalData.currentURL+'problem/'+currentQuestionNo+'/',
+    
+    data: {
+      session_id : app.globalData.UserID
+    },
+    method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    // header: {}, // 设置请求的 header
+    success: function(res){
+      console.log(res.data)
+    },
+    fail: function() {
+      // fail
+    },
+    complete: function() {
+      // complete
+    }
+  })
+
+
+}
+
+
+function requestFlag(that){
+wx.request({
+  url: app.globalData.lastURL+'/postdata',
+  method: 'GET',
+  success: function(res){
+    console.log('aaaaaaaaa   '+res.data)
+    if(res.data==0){
+   wx.showModal({
+     title: '提示',
+     content: '测试尚未开始哦',
+     showCancel:false,
+     success: function(res) {
+      that.stopTime();
+      if (res.confirm) {
+        console.log('用户点击确定')
+        wx.redirectTo({
+          url: '../testPage/testPage',
+          complete: function() {
+          }
+        })
+    }
+  }
+})
+}
+    that.setData({
+      initFlag : true
+    })
+  },
+  fail: function() {
+    return;
+  },
+  complete: function() {
+    
+  }
+})
 }

@@ -1,19 +1,18 @@
 @import '../../weui.wxss';
 
-
 .container {
   padding: 4px 12px;
 }
 .coursee{
     border: 2px solid #ffffff;
     border-radius: 5px;
-
 }
+
 .hint {
     display: block;
     margin: 8px 0;
     color: #999;
-    font-size: 30px
+    font-size: 20px;
 }
 
 .course {

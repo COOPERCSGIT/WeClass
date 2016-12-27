@@ -1,23 +1,21 @@
-<view class="container">
-    <view class = "coursee"><text class="hint">课程资源/目前仅支持作业发布</text></view>
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title"></view>
+    <view class="page__desc">WeClass功能</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for-items="{{grids}}">
+        <navigator wx:if="{{grids[index]==0}}" url="{{pagePath[index]}}" class="weui-grid" hover-class="weui-grid_active" id="{{grids[index]}}">
+          <image class="weui-grid__icon" src="{{paths[index]}}" />
+          <view class="weui-grid__label">{{names[index]}}</view>
+        </navigator>
 
-    <view class="course" bindtap = "onItemClick" id = 'S'>
-        <text class="courseName">信号与系统</text>
+        <navigator wx:else url="" bindtap = "click" class="weui-grid" hover-class="weui-grid_active" id="{{grids[index]}}">
+          <image class="weui-grid__icon" src="{{paths[index]}}" />
+          <view class="weui-grid__label">{{names[index]}}</view>
+        </navigator>
+      </block>
     </view>
-
-    <view class="course" bindtap = "onItemClick" id = "P">
-        <text class="courseName">概率论</text>
-
-    </view>
-
-    <view class="course" bindtap = "onItemClick" id = "D">
-        <text class="courseName">数字设计</text>
-    </view>
-
-    <view class="course" bindtap = "onItemClick" id = "D">
-        <text class="courseName">大学物理</text>
-   </view>
+  </view>
 </view>
-    <!--position: absolute;
-    margin-top: 35px;
-    margin-left: 100px; -->

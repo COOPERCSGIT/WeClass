@@ -1,5 +1,5 @@
 <view class="container">
-  <navigator url="../testPage/testPage" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="S">
+  <navigator url="../homework/homework" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="S">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
       <image class="weui-media-box__thumb" src="{{iconX}}" />
     </view>
@@ -8,7 +8,7 @@
       <view class="weui-media-box__desc">任教老师：何春 周一 周三 周五</view>
     </view>
   </navigator>
-  <navigator url="../testPage/testPage" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="SS">
+  <navigator url="../homework/homework" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="SS">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="onItemClick">
       <image class="weui-media-box__thumb" src="{{iconSS}}" />
     </view>
@@ -17,7 +17,7 @@
       <view class="weui-media-box__desc">任教老师：谢菊兰 周二 周四 </view>
     </view>
   </navigator>
-  <navigator url="../testPage/testPage" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="W">
+  <navigator url="../homework/homework" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="onItemClick" id="W">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="onItemClick">
       <image class="weui-media-box__thumb" src="{{iconW}}" />
     </view>
@@ -26,7 +26,7 @@
       <view class="weui-media-box__desc">任教老师：滕宝华 周一 周三</view>
     </view>
   </navigator>
-  <navigator url="../testPage/testPage" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" id="P" bindtap="onItemClick">
+  <navigator url="../homework/homework" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" id="P" bindtap="onItemClick">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="onItemClick">
       <image class="weui-media-box__thumb" src="{{iconG}}" />
     </view>
@@ -35,7 +35,7 @@
       <view class="weui-media-box__desc">任教老师：杜鸿飞 周二 周五</view>
     </view>
   </navigator>
-  <navigator url="../testPage/testPage" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" id="R" bindtap="onItemClick">
+  <navigator url="../homework/homework" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" id="R" bindtap="onItemClick">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="onItemClick">
       <image class="weui-media-box__thumb" src="{{iconR}}" />
     </view>

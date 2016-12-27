@@ -1,14 +1,15 @@
 {
     "pages":[
-        "pages/info/info",
+            "pages/login/login",
         "pages/homepage/homepage",
-        "pages/login/login",
+        "pages/info/info",
         "pages/testPage/testPage",
         "pages/quiz/quiz",
-        "pages/initquiz/initquiz",
+        "pages/answerPage/answerPage",
         "pages/info/homework/homework",
-        "pages/info/download/download"
-            ],
+        "pages/info/download/download",
+        "pages/info/selectCourse/selectCourse"
+    ],
     "window":{
        "backgroundTextStyle": "light",
        "navigationBarBackgroundColor": "#3197ed",
@@ -17,24 +18,25 @@
     },
     "tabBar": {
         "color": "#ddd",
-        "selectedColor": "#3cc51f",
+        "selectedColor": "#3197ed",
         "borderStyle": "white",
         "backgroundColor": "#fff",
+
       "list": [{
         "pagePath": "pages/homepage/homepage",
         "text": "课堂测验",
-        "iconPath": "/images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png"
+        "iconPath": "/images/survey1.png",
+        "selectedIconPath": "images/survey.png"
       },{
         "pagePath": "pages/info/info",
         "text": "课程信息",
-        "iconPath": "/images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png"
+        "iconPath": "/images/ViewGallery1.png",
+        "selectedIconPath": "images/ViewGallery.png"
       },{
         "pagePath": "pages/login/login",
         "text": "我的账号",
-        "iconPath": "/images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png"
+        "iconPath": "/images/account-filling1.png",
+        "selectedIconPath": "images/account-filling.png"
       }]
     }
 }

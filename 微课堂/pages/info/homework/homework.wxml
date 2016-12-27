@@ -1,10 +1,11 @@
-<view class = "container">
-
-<view wx:if="{{hiddeFlag}}"><text  class = "atext"></text></view>
-
-<view wx:for="{{test}}" class = "course">
-    <view id = "{{index}}" class = "course2" bindtap = "clickTest" >
-        <text class = "text">{{item}}</text>
+<view class="container">
+  <navigator wx:for="{{homework}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="onItemClick" id="P">
+      <image class="weui-media-box__thumb" src="{{iconG}}" />
     </view>
-</view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">作业 {{index+1}}</view>
+      <view class="weui-media-box__desc">{{item}}  时间：{{time[index]}}</view>
+    </view>
+ </navigator>
 </view>

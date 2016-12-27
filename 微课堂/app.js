@@ -26,6 +26,7 @@ App({
     }
   },
   globalData:{
+    LoginFlag : false,
     UserID : null,
     hiddenFlag :true,
     lastURL:util.BASE_URL,
