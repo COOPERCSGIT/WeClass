@@ -1,25 +1,30 @@
-<canvas class="canvas" canvas-id="canvas2" style="float:left;clear:left;width:200px;height:200px;margin-bottom:100px;"></canvas>
+<text class = "t">本次答题人数:63(模拟结果)</text>
+<canvas  class="canvas" canvas-id="canvas1" style="float:left;clear:left;width:220px;height:220px;margin-bottom:100px;"></canvas>
 <view class = "info" style="float:left;position:relative;">
-<view class = "ratio"><text class = "text">正确率:{{right[0]}}</text></view>
-    <view class="para"><text style="color:#E08031;">A:10%</text></view>
-    <view class="para"><text style="color:#0060C0">B:10%</text></view>
-    <view class="para"><text style="color:lightsalmon">C:10%</text></view>
-    <view class="para"><text style="color:#199475">D:10%</text></view>
-</view>
-<canvas class="canvas" canvas-id="canvas3" style="float:left;clear:left;width:200px;height:200px;margin-bottom:100px;"></canvas>
-<view class = "info" style="float:left;position:relative;">
-<view class = "ratio"><text class = "text">正确率:{{right[0]}}</text></view>
-    <view class="para"><text style="color:#7CFC00;">A:10%</text></view>
-    <view class="para"><text style="color:#1E90FF">B:10%</text></view>
-    <view class="para"><text style="color:#FFFF00">C:10%</text></view>
-    <view class="para"><text style="color:#FF8247">D:10%</text></view>
-</view>
-<canvas class="canvas" canvas-id="canvas4" style="float:left;clear:left;width:200px;height:200px;margin-bottom:100px;"></canvas>
-<view class = "info" style="float:left;position:relative;">
-<view class = "ratio"><text class = "text">正确率:{{right[0]}}</text></view>
-    <view class="para"><text style="color:#7CFC00;">A:10%</text></view>
-    <view class="para"><text style="color:#1E90FF">B:10%</text></view>
-    <view class="para"><text style="color:#FFFF00">C:10%</text></view>
-    <view class="para"><text style="color:#FF8247">D:10%</text></view>
+<view class = "ratio"><text class = "text">正确答案:{{correctAnswer[0]}}</text></view>
+    <view class="para"><text style="color:#364F6B;">A.{{answerD[0][0]}}%</text></view>
+    <view class="para"><text style="color:#3FC1C9">B.{{answerD[0][1]}}%</text></view>
+    <view class="para"><text style="color:#FCE38A">C.{{answerD[0][2]}}%</text></view>
+    <view class="para"><text style="color:#FC5185">D.{{answerD[0][3]}}%</text></view>
 </view>
 
+
+<canvas  class="canvas" canvas-id="canvas2" style="float:left;clear:left;width:220px;height:220px;margin-bottom:100px;"></canvas>
+<view class = "info" style="float:left;position:relative;">
+<view class = "ratio"><text class = "text">正确答案:{{correctAnswer[1]}}</text></view>
+    <view class="para"><text style="color:#364F6B;">A.{{answerD[1][0]}}%</text></view>
+    <view class="para"><text style="color:#3FC1C9">B.{{answerD[1][1]}}%</text></view>
+    <view class="para"><text style="color:#FCE38A">C.{{answerD[1][2]}}%</text></view>
+    <view class="para"><text style="color:#FC5185">D.{{answerD[1][3]}}%</text></view>
+</view>
+
+
+
+<canvas  class="canvas" canvas-id="canvas3" style="float:left;clear:left;width:220px;height:220px;margin-bottom:100px;"></canvas>
+<view class = "info" style="float:left;position:relative;">
+<view class = "ratio"><text class = "text">正确答案:{{correctAnswer[2]}}</text></view>
+    <view class="para"><text style="color:#364F6B;">A.{{answerD[2][0]}}%</text></view>
+    <view class="para"><text style="color:#3FC1C9">B.{{answerD[2][1]}}%</text></view>
+    <view class="para"><text style="color:#FCE38A">C.{{answerD[2][2]}}%</text></view>
+    <view class="para"><text style="color:#FC5185">D.{{answerD[2][3]}}%</text></view>
+</view>

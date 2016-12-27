@@ -26,6 +26,8 @@ App({
     }
   },
   globalData:{
+    UserID : null,
+    LoginFlag : false,
     currentURL : Util.BASE_URL,
     currentTestNo : 0,
     userInfo:null

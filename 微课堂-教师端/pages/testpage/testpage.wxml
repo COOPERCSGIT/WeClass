@@ -1,8 +1,13 @@
-<view class = "container">
-<view wx:for="{{test}}" class = "course">
-    <view id = "{{index}}" class = "course2" bindtap = "clickTest" >
-        <text class = "text">{{item}}</text>
-        <text class = "time">{{testTime[index]}}</text>
-    </view>
-</view>
+<view class="container">
+<view class = "tests"><text class="hint">课堂测试</text></view>
+
+<navigator wx:for="{{test}}" url="../duringTests/duringTests" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap = "clickTest" id = "{{index}}">
+        <view  class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{icon}}"/>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{test[index]}}</view>
+        <view class="weui-media-box__desc">测试时间:{{testTime[index]}}</view>
+        </view>
+    </navigator>
 </view>

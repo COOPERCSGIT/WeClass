@@ -17,3 +17,8 @@
 .canvas{
     margin-left: 50px;
 }
+.t{
+    position: relative;
+    margin-left: 80px;
+    text-align: center;
+}

@@ -1,15 +1,13 @@
 {
-  "pages":[
-        "pages/overview/overview",
-
+  "pages": [
+    "pages/login/login",
+    "pages/overview/overview",
     "pages/testpage/testpage",
     "pages/duringTests/duringTests"
-    
   ],
-    "window":{
-        "navigationBarTitleText": "微课堂教师版",
-        "navigationBarTextStyle": "white",
-        "navigationBarBackgroundColor": "#7A8B8B"
+  "window": {
+    "navigationBarTitleText": "微课堂教师版",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#3197ED"
   }
-
 }

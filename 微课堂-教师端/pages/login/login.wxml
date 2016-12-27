@@ -1,0 +1,27 @@
+<form bindsubmit="submitValue" bindreset="changeReset">
+  <view class="container">
+    <view hidden="{{hidden}}">
+      <view class="form-wrap">
+        <view class="flex-wrap input-wrap">
+          <input placeholder="教师登录" id="username" class="account-info-input" name = "username" />
+        </view>
+        <view class="flex-wrap input-wrap">
+          <input password placeholder="密码" id="password" class="account-info-input" value="{{password}}" name = "password"/>
+        </view>
+      </view>
+      <button class="submit" bindtap="sign" form-type="submit">Sign In/Up</button>
+    </view>
+    <view hidden="{{!hidden}}">
+      <view class="userinfo">
+        <image class="userinfo-avatar" src="{{icon}}" background-size="cover"></image>
+        <text class="userinfo-nickname">大物老师</text>
+      </view>
+      <view class="usermotto">
+        <text class="user-motto"> {{motto}} </text>
+      </view>
+    </view>
+  </view>
+</form>
+
+  <!--position: absolute;
+  margin: 60px;-->
