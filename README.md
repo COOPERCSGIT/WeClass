@@ -8,10 +8,6 @@ WeClass（微课堂）是一款集课堂在线测试与统计分析，信息发�
 1. 提高课堂教学质量，面向大多数对学生课堂掌握情况不清的大学教师，检测后的统计结果有助于教师改进教学策略。
 2. 方便同学们对作业与文档的管理，教师可在后台发布作业与课堂资料，改善学生获取资料作业途径分散的情况。
 
-##预览
-![PNG](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/weClass.png)
-![gif](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/stu.gif)
-![gif](https://github.com/COOPERCSGIT/WeClass/blob/master/pics/tea.gif)
 
 ##学生端
 1. 在主页面可以查看今天的课程，并在可以根据相应的时间段来显示正在上的课程
